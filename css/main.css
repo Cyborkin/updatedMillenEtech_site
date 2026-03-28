@@ -826,6 +826,18 @@ section { padding: 7rem 0; }
   image-rendering: -webkit-optimize-contrast;
 }
 
+/* Chase avatar — PNG with white bg: scale down slightly so character fits,
+   show on dark card bg so white corners are hidden by the circle clip */
+.founder-avatar--photo.chase-avatar {
+  background: var(--bg-card);
+}
+
+.founder-avatar--photo.chase-avatar img {
+  object-fit: contain;
+  object-position: center bottom;
+  padding: 0.5rem 0.5rem 0;
+}
+
 .founder-card h3 { margin-bottom: 0.25rem; color: var(--text-primary); }
 .founder-title {
   font-size: 0.85rem;
