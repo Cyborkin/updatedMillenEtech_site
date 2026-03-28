@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mallo — AI Meal Planning &amp; Grocery Assistant | MillenETech</title>
+  <meta name="description" content="Mallo makes meal planning feel easy. Organize recipes, schedule your week, and generate consolidated grocery lists — powered by AI." />
+  <meta property="og:title" content="Mallo — Meal Planning That Actually Works" />
+  <meta property="og:description" content="Stop wasting food. Stop over-spending. Mallo learns what you eat and builds grocery lists that actually make sense." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#080810" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/mallo.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────────── -->
+<nav id="nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Millen<span class="gradient-text">E</span>Tech</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#what-we-do">What We Do</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="index.html#philosophy">Philosophy</a></li>
+      <li><a href="index.html#founders">Team</a></li>
+      <li><a href="index.html#blog">Blog</a></li>
+      <li><a href="mallo.html" class="nav-link-mallo active">Mallo <span class="nav-badge">App</span></a></li>
+    </ul>
+
+    <a href="index.html#cta-section" class="btn btn-ghost nav-cta">Work With Us</a>
+
+    <button class="nav-burger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="nav-overlay" role="dialog" aria-label="Mobile menu">
+  <a href="index.html#what-we-do">What We Do</a>
+  <a href="index.html#products">Products</a>
+  <a href="index.html#philosophy">Philosophy</a>
+  <a href="index.html#founders">Team</a>
+  <a href="index.html#blog">Blog</a>
+  <a href="mallo.html">Mallo</a>
+  <a href="index.html#cta-section" class="btn btn-primary" style="font-size:1rem;margin-top:1rem;">Work With Us</a>
+</div>
+
+
+<!-- ── HERO ────────────────────────────────────────────────── -->
+<section class="mallo-hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="mallo-hero-content">
+    <div class="mallo-app-icon" aria-hidden="true">🍡</div>
+    <span class="section-label" style="display:block;text-align:center;margin-bottom:1rem;">By MillenETech</span>
+    <h1 class="mallo-headline">
+      Meal planning that<br />
+      <span class="gradient-text">actually feels easy.</span>
+    </h1>
+    <p class="mallo-sub">
+      Stop wasting food. Stop over-spending. Mallo learns what you eat and builds grocery lists that actually make sense.
+    </p>
+    <div class="mallo-ctas">
+      <a href="#" class="btn btn-primary mallo-store-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        Download on the App Store
+      </a>
+      <a href="support.html" class="btn btn-ghost">Support &amp; Help</a>
+    </div>
+    <p class="mallo-availability">Available on iOS &middot; Free to download</p>
+  </div>
+</section>
+
+
+<!-- ── FEATURES ─────────────────────────────────────────────── -->
+<section class="mallo-features">
+  <div class="container">
+    <div class="section-header section-reveal" style="text-align:center;max-width:600px;margin:0 auto 4rem;">
+      <span class="section-label">Features</span>
+      <h2>Everything you need.<br />Nothing you don't.</h2>
+    </div>
+
+    <div class="mallo-feature-grid stagger-group">
+
+      <article class="mallo-feature-card card-stagger">
+        <div class="mallo-feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="8" y="12" width="32" height="28" rx="3"/>
+            <path d="M16 12V9a8 8 0 0116 0v3"/>
+            <path d="M18 24h12M18 30h8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Recipe Management</h3>
+        <p>Save, organize, and search all your recipes in one place. Import from any source or build your own from scratch. Every ingredient tracked automatically.</p>
+      </article>
+
+      <article class="mallo-feature-card card-stagger">
+        <div class="mallo-feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="6" y="8" width="36" height="34" rx="3"/>
+            <path d="M6 18h36"/>
+            <path d="M16 8V4M32 8V4" stroke-linecap="round"/>
+            <rect x="13" y="24" width="8" height="7" rx="1"/>
+            <rect x="27" y="24" width="8" height="7" rx="1"/>
+          </svg>
+        </div>
+        <h3>Weekly Meal Scheduling</h3>
+        <p>Plan breakfast, lunch, dinner, and snacks across the whole week in a clean drag-and-drop calendar. See your nutritional spread at a glance.</p>
+      </article>
+
+      <article class="mallo-feature-card card-stagger">
+        <div class="mallo-feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M10 14h28M10 22h20M10 30h24M10 38h16" stroke-linecap="round"/>
+            <circle cx="38" cy="34" r="7" fill="none"/>
+            <path d="M35 34l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Smart Grocery Lists</h3>
+        <p>Mallo consolidates ingredients from your entire week into a single, de-duplicated shopping list — sorted by store section. No more buying three things you already have.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── HOW IT WORKS ──────────────────────────────────────────── -->
+<section class="mallo-how" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header section-reveal" style="text-align:center;max-width:600px;margin:0 auto 4rem;">
+      <span class="section-label">How It Works</span>
+      <h2>Three steps.<br />Real results.</h2>
+    </div>
+
+    <div class="mallo-steps">
+      <div class="mallo-step section-reveal">
+        <div class="mallo-step-num gradient-text">01</div>
+        <h3>Add your recipes</h3>
+        <p>Drop in a URL, type one in manually, or browse Mallo's starter library. Every ingredient gets parsed and stored cleanly.</p>
+      </div>
+      <div class="mallo-step-divider" aria-hidden="true"></div>
+      <div class="mallo-step section-reveal">
+        <div class="mallo-step-num gradient-text">02</div>
+        <h3>Plan your week</h3>
+        <p>Drag meals into your weekly calendar. Mallo shows you your nutritional balance and flags gaps in your plan.</p>
+      </div>
+      <div class="mallo-step-divider" aria-hidden="true"></div>
+      <div class="mallo-step section-reveal">
+        <div class="mallo-step-num gradient-text">03</div>
+        <h3>Shop smarter</h3>
+        <p>Tap "Generate List" and get a consolidated, sorted grocery list ready to go. Check items off as you shop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PRIVACY SNAPSHOT ──────────────────────────────────────── -->
+<section class="mallo-privacy-snapshot">
+  <div class="container">
+    <div class="privacy-snap-inner">
+      <div class="privacy-snap-text section-reveal">
+        <span class="section-label">Privacy</span>
+        <h2>Your data is yours.<br />Full stop.</h2>
+        <p>We collect only what's needed to run the app — your account info and the meal data you create. We don't sell it. We don't share it with advertisers. You can request deletion any time.</p>
+        <a href="privacy.html" class="btn btn-ghost" style="margin-top:1.5rem;">Read Our Privacy Policy &rarr;</a>
+      </div>
+      <div class="privacy-snap-pills section-reveal">
+        <div class="privacy-pill">
+          <span class="pill-icon" aria-hidden="true">🚫</span>
+          <span>We never sell your data</span>
+        </div>
+        <div class="privacy-pill">
+          <span class="pill-icon" aria-hidden="true">🔒</span>
+          <span>No ads, no trackers</span>
+        </div>
+        <div class="privacy-pill">
+          <span class="pill-icon" aria-hidden="true">🗑</span>
+          <span>Delete your account anytime</span>
+        </div>
+        <div class="privacy-pill">
+          <span class="pill-icon" aria-hidden="true">👶</span>
+          <span>Not for users under 13</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SUPPORT CTA ───────────────────────────────────────────── -->
+<section style="background:var(--bg-secondary);padding:5rem 0;">
+  <div class="container">
+    <div class="cta-inner" style="text-align:center;">
+      <span class="section-label">Need Help?</span>
+      <h2 style="margin-bottom:1rem;">We're one email away.</h2>
+      <p style="margin-bottom:2rem;">Questions, bugs, feedback — we read every message.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="support.html" class="btn btn-primary">Visit Support Center</a>
+        <a href="mailto:support@millenetech.com" class="btn btn-ghost">support@millenetech.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ───────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">Millen<span class="gradient-text">E</span>Tech</span>
+        <p>AI that works for the real world.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Mallo</h4>
+        <ul>
+          <li><a href="#">Download on iOS</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>MillenETech</h4>
+        <ul>
+          <li><a href="index.html#what-we-do">What We Do</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="index.html#founders">Team</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:support@millenetech.com">support@millenetech.com</a></li>
+          <li><a href="index.html#cta-section">Start a Project</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 MillenETech &middot; All rights reserved.</span>
+      <span>
+        <a href="privacy.html">Privacy Policy</a> &middot;
+        <a href="support.html">Support</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

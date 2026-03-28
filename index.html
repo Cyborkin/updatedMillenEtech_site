@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MillenETech — AI That Actually Works</title>
+  <meta name="description" content="MillenETech builds practical AI tools for people and businesses who want results — not demos. Real solutions. No hype." />
+  <meta property="og:title" content="MillenETech — AI That Actually Works" />
+  <meta property="og:description" content="Practical AI tools for real people and real businesses." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#080810" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+<nav id="nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Millen<span class="gradient-text">E</span>Tech</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#what-we-do">What We Do</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#founders">Team</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="mallo.html" class="nav-link-mallo">Mallo <span class="nav-badge">App</span></a></li>
+    </ul>
+
+    <a href="#cta-section" class="btn btn-ghost nav-cta">Work With Us</a>
+
+    <button class="nav-burger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="nav-overlay" role="dialog" aria-label="Mobile menu">
+  <a href="#what-we-do">What We Do</a>
+  <a href="#products">Products</a>
+  <a href="#philosophy">Philosophy</a>
+  <a href="#founders">Team</a>
+  <a href="#blog">Blog</a>
+  <a href="mallo.html">Mallo</a>
+  <a href="#cta-section" class="btn btn-primary" style="font-size:1rem;margin-top:1rem;">Work With Us</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">AI That Actually Works</p>
+
+    <h1 class="hero-headline">
+      We Solve Real Problems.<br />
+      <span class="gradient-text">Not Ones Invented</span><br />
+      to Justify AI.
+    </h1>
+
+    <p class="hero-sub">
+      MillenETech builds practical AI tools for people and businesses who want results — not demos.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#products" class="btn btn-primary">Explore What We're Building</a>
+      <a href="#cta-section" class="btn btn-ghost">Work With Us</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHAT WE DO
+════════════════════════════════════════════════════════════ -->
+<section id="what-we-do" class="lazy-section">
+  <div class="container">
+    <div class="section-header section-reveal">
+      <span class="section-label">What We Do</span>
+      <h2>Simple tools.<br />Real impact. No fluff.</h2>
+    </div>
+
+    <div class="pillar-grid stagger-group">
+
+      <!-- Card 1 -->
+      <article class="pillar-card card-stagger">
+        <svg class="pillar-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="20" cy="16" r="7"/>
+          <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12"/>
+          <path d="M30 10l3 3-3 3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>AI for everyday people</h3>
+        <p>Tools that help real people save time, make smarter decisions, and stop doing things manually.</p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="pillar-card card-stagger">
+        <svg class="pillar-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="6" y="12" width="28" height="20" rx="3"/>
+          <path d="M14 12V9a6 6 0 0112 0v3"/>
+          <path d="M20 22v4" stroke-linecap="round"/>
+          <circle cx="20" cy="21" r="2"/>
+        </svg>
+        <h3>AI for small businesses</h3>
+        <p>We build AI that replaces broken workflows — not expensive consultants.</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="pillar-card card-stagger">
+        <svg class="pillar-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="7" y="7" width="10" height="10" rx="2"/>
+          <rect x="23" y="7" width="10" height="10" rx="2"/>
+          <rect x="7" y="23" width="10" height="10" rx="2"/>
+          <rect x="23" y="23" width="10" height="10" rx="2"/>
+          <path d="M17 12h6M12 17v6M28 17v6M17 28h6" stroke-linecap="round"/>
+        </svg>
+        <h3>Autonomous systems</h3>
+        <p>AI agents that run your business processes while you focus on what matters.</p>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="pillar-card card-stagger">
+        <svg class="pillar-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <polyline points="6 28 14 18 20 23 28 12 34 16"/>
+          <path d="M28 8h6v6" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="6" y1="34" x2="34" y2="34" stroke-linecap="round"/>
+        </svg>
+        <h3>Data collection &amp; automation</h3>
+        <p>Smarter pipelines. Cleaner data. Faster decisions.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRODUCTS
+════════════════════════════════════════════════════════════ -->
+<section id="products" class="lazy-section">
+  <div class="container">
+    <div class="section-header section-reveal" style="margin-bottom:5rem;">
+      <span class="section-label">Products</span>
+      <h2>What we're building.</h2>
+    </div>
+
+    <!-- Mallo -->
+    <div class="product-row">
+      <div class="product-text">
+        <span class="product-tag tag-live">Live</span>
+        <h3>Mallo — AI Recipe Planning &amp; Grocery Optimization</h3>
+        <p>Stop wasting food. Stop over-spending. Mallo learns what you eat and builds grocery lists that actually make sense.</p>
+        <a href="#" class="btn btn-ghost">Learn More &rarr;</a>
+      </div>
+      <div class="product-visual vis-mallo" aria-hidden="true">
+        <div style="font-size:.65rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Weekly Grocery Score</div>
+        <div class="vis-bar"><div class="vis-bar-fill"></div></div>
+        <div class="vis-bar"><div class="vis-bar-fill"></div></div>
+        <div class="vis-bar"><div class="vis-bar-fill"></div></div>
+        <div class="vis-bar"><div class="vis-bar-fill"></div></div>
+        <div class="vis-bar"><div class="vis-bar-fill"></div></div>
+        <div style="margin-top:1.25rem;font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;background:var(--gradient-main);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">94% efficiency</div>
+      </div>
+    </div>
+
+    <!-- Real Estate -->
+    <div class="product-row reverse">
+      <div class="product-text">
+        <span class="product-tag tag-dev">In Development</span>
+        <h3>Smarter Real Estate Decisions</h3>
+        <p>AI-powered insights for buyers, sellers, and builders. No agent fees. Just data.</p>
+      </div>
+      <div class="product-visual vis-realestate" aria-hidden="true">
+        <div class="vis-cell hot"></div>
+        <div class="vis-cell"></div>
+        <div class="vis-cell warm"></div>
+        <div class="vis-cell hot"></div>
+        <div class="vis-cell"></div>
+        <div class="vis-cell warm"></div>
+        <div class="vis-cell hot"></div>
+        <div class="vis-cell"></div>
+        <div class="vis-cell warm"></div>
+        <div class="vis-cell hot"></div>
+        <div class="vis-cell"></div>
+        <div class="vis-cell warm"></div>
+        <div class="vis-cell"></div>
+        <div class="vis-cell hot"></div>
+        <div class="vis-cell warm"></div>
+        <div class="vis-cell hot"></div>
+        <div class="vis-cell"></div>
+        <div class="vis-cell warm"></div>
+        <div class="vis-cell"></div>
+        <div class="vis-cell hot"></div>
+      </div>
+    </div>
+
+    <!-- Autopilot -->
+    <div class="product-row">
+      <div class="product-text">
+        <span class="product-tag tag-soon">Coming Soon</span>
+        <h3>Your Business on Autopilot</h3>
+        <p>Workflow automation that removes the human bottleneck — without removing the human.</p>
+      </div>
+      <div class="product-visual vis-flow" aria-hidden="true">
+        <div class="flow-node active">Trigger</div>
+        <div class="flow-line"></div>
+        <div class="flow-node active">AI Process</div>
+        <div class="flow-line"></div>
+        <div class="flow-node">Decision</div>
+        <div class="flow-line"></div>
+        <div class="flow-node">Action</div>
+        <div class="flow-line"></div>
+        <div class="flow-node">Output</div>
+      </div>
+    </div>
+
+    <!-- Custom Agents -->
+    <div class="product-row reverse">
+      <div class="product-text">
+        <span class="product-tag tag-available">Available Now</span>
+        <h3>AI Built for Your Business</h3>
+        <p>We scope, build, and deploy custom agents. No templates. No off-the-shelf excuses.</p>
+        <a href="#cta-section" class="btn btn-primary">Start a Project &rarr;</a>
+      </div>
+      <div class="product-visual vis-agent" aria-hidden="true">
+        <div class="agent-orb"></div>
+        <div class="agent-orb"></div>
+        <div class="agent-orb"></div>
+        <div class="agent-hex">AI</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PHILOSOPHY
+════════════════════════════════════════════════════════════ -->
+<section id="philosophy" class="lazy-section">
+  <div class="container">
+    <div class="philosophy-inner">
+
+      <div class="philosophy-quote fade-left">
+        <span class="section-label" style="margin-bottom:1.5rem;">Our Philosophy</span>
+        <blockquote>
+          "Most AI companies build impressive demos.<br />
+          We build things people<br />
+          actually use."
+        </blockquote>
+      </div>
+
+      <div>
+        <div class="principles-grid">
+          <div class="principle-card fade-right">
+            <div class="principle-icon" aria-hidden="true">⚡</div>
+            <h4>Simplicity wins</h4>
+            <p>If it's not simple, it's not done.</p>
+          </div>
+          <div class="principle-card fade-right">
+            <div class="principle-icon" aria-hidden="true">🎯</div>
+            <h4>Real problems only</h4>
+            <p>We don't invent problems to justify building AI.</p>
+          </div>
+          <div class="principle-card fade-right">
+            <div class="principle-icon" aria-hidden="true">👁</div>
+            <h4>Invisible automation</h4>
+            <p>The best AI is the kind you forget is there.</p>
+          </div>
+          <div class="principle-card fade-right">
+            <div class="principle-icon" aria-hidden="true">🤝</div>
+            <h4>Human-first, always</h4>
+            <p>AI enhances people. It doesn't replace judgment.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CASE STUDIES
+════════════════════════════════════════════════════════════ -->
+<section id="cases" class="lazy-section">
+  <div class="container">
+    <div class="section-header section-reveal">
+      <span class="section-label">In Practice</span>
+      <h2>What this looks like<br />in the real world.</h2>
+    </div>
+
+    <div class="cases-grid stagger-group">
+
+      <article class="case-card card-stagger">
+        <span class="case-metric"><span id="metric-1">0 hrs/wk</span></span>
+        <p>A restaurant owner reclaimed 8 hours every week by automating supplier orders with a custom AI agent.</p>
+        <span class="case-tag">Small Business Automation</span>
+      </article>
+
+      <article class="case-card card-stagger">
+        <span class="case-metric"><span id="metric-2">$0K</span></span>
+        <p>A home buyer avoided a costly mistake using our real estate AI risk analysis before signing.</p>
+        <span class="case-tag">Real Estate AI</span>
+      </article>
+
+      <article class="case-card card-stagger">
+        <span class="case-metric"><span id="metric-3">$0K/yr</span></span>
+        <p>A solo founder replaced a high-cost ops role with a custom AI agent that runs 24/7.</p>
+        <span class="case-tag">Custom Agent</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOUNDERS
+════════════════════════════════════════════════════════════ -->
+<section id="founders" class="lazy-section">
+  <div class="container">
+    <div class="section-header section-reveal" style="text-align:center;">
+      <span class="section-label">The Team</span>
+      <h2>Built by people<br />who ship things.</h2>
+    </div>
+
+    <div class="founders-grid stagger-group">
+
+      <article class="founder-card card-stagger">
+        <div class="founder-avatar founder-avatar--photo">
+          <img src="assets/hunter-avatar.jpeg" alt="Hunter Owens" />
+        </div>
+        <h3>Hunter Owens</h3>
+        <span class="founder-title">Co-Founder</span>
+        <p>Builder. Not a theorist. Hunter focuses on systems that ship — and businesses that actually need them.</p>
+      </article>
+
+      <article class="founder-card card-stagger">
+        <div class="founder-avatar founder-avatar--photo">
+          <img src="assets/chase-avatar.jpeg" alt="Chase Kozoh" />
+        </div>
+        <h3>Chase Kozoh</h3>
+        <span class="founder-title">Co-Founder</span>
+        <p>Chase turns complex problems into tools people don't have to think about. That's the job.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CTA
+════════════════════════════════════════════════════════════ -->
+<section id="cta-section" class="lazy-section">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="section-label">Let's Work Together</span>
+      <h2>Stop Running<br /><span class="gradient-text">Inefficient Systems.</span></h2>
+      <p>Let's build something that actually works.</p>
+      <div class="cta-buttons">
+        <a href="mailto:hello@millenEtech.com" class="btn btn-primary">Start a Project</a>
+        <a href="#products" class="btn btn-ghost">See What We're Building</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     BLOG
+════════════════════════════════════════════════════════════ -->
+<section id="blog" class="lazy-section">
+  <div class="container">
+    <div class="section-header section-reveal">
+      <span class="section-label">Insights</span>
+      <h2>Straight talk<br />on AI.</h2>
+    </div>
+
+    <div class="blog-grid">
+
+      <article class="blog-card card-stagger" style="opacity:0;transform:translateY(28px);">
+        <span class="blog-tag">Strategy</span>
+        <h3>Why Most AI Automations Fail in Year One</h3>
+        <p>The problem isn't the technology. It's the assumptions baked in before a single line gets written.</p>
+        <a href="#" class="blog-read">Read</a>
+      </article>
+
+      <article class="blog-card card-stagger" style="opacity:0;transform:translateY(28px);">
+        <span class="blog-tag">Data</span>
+        <h3>The Real Cost of Bad Data in Small Business</h3>
+        <p>You can't automate chaos. Before you build an AI pipeline, you have to audit what's feeding it.</p>
+        <a href="#" class="blog-read">Read</a>
+      </article>
+
+      <article class="blog-card card-stagger" style="opacity:0;transform:translateY(28px);">
+        <span class="blog-tag">Explainer</span>
+        <h3>What 'Agentic AI' Actually Means for Your Business</h3>
+        <p>Stripped of the buzzwords: an AI agent is just software that makes decisions without you in the loop.</p>
+        <a href="#" class="blog-read">Read</a>
+      </article>
+
+    </div>
+
+    <div class="blog-cta">
+      <p>No hype. Just what works.</p>
+      <a href="#" class="btn btn-ghost">View All Articles &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="nav-logo">Millen<span class="gradient-text">E</span>Tech</span>
+        <p>AI that works for the real world.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="mallo.html">Mallo</a></li>
+          <li><a href="#products">Real Estate AI</a></li>
+          <li><a href="#products">Business Autopilot</a></li>
+          <li><a href="#products">Custom Agents</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#founders">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#what-we-do">What We Do</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:hello@millenEtech.com">Email Us</a></li>
+          <li><a href="#cta-section">Start a Project</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 MillenETech &middot; All rights reserved.</span>
+      <span>
+        <a href="privacy.html">Privacy Policy</a> &middot;
+        <a href="support.html">Support</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="js/particles.js" defer></script>
+<script src="js/main.js" defer></script>
+
+</body>
+</html>

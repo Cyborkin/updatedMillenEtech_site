@@ -1,0 +1,140 @@
+/* ============================================================
+   MillenETech — animations.css
+   GSAP targets, initial states, scroll-driven reveals
+   ============================================================ */
+
+/* ── Initial hidden states (GSAP will animate these in) ────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* Section headers start blurred */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(4px);
+}
+
+/* Cards stagger target */
+.card-stagger {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+/* ── Count-up number initial state ─────────────────────────── */
+.count-num {
+  display: inline-block;
+  /* content replaced by JS */
+}
+
+/* ── Animated underline for hero eyebrow ───────────────────── */
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 8px rgba(59,130,246,0.4); }
+  50%       { text-shadow: 0 0 20px rgba(59,130,246,0.8), 0 0 40px rgba(139,92,246,0.3); }
+}
+
+.hero-eyebrow.visible {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* ── Particle canvas fade-in ────────────────────────────────── */
+#particles-canvas {
+  opacity: 0;
+  transition: opacity 1s ease 1s;
+}
+
+#particles-canvas.visible { opacity: 1; }
+
+/* ── Scroll indicator ───────────────────────────────────────── */
+.scroll-indicator {
+  transition: opacity 0.5s ease;
+}
+
+/* ── Nav link active state ──────────────────────────────────── */
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+.nav-links a.active::after { width: 100%; }
+
+/* ── Product visual hover parallax (applied via JS) ─────────── */
+.product-visual {
+  transition: transform 0.1s ease-out;
+}
+
+/* ── Blog card read link arrow animation ────────────────────── */
+.blog-read::after {
+  content: ' →';
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.blog-read:hover::after {
+  transform: translateX(4px);
+}
+
+/* ── Metric counter glow on complete ────────────────────────── */
+.case-metric.counted {
+  animation: metricGlow 0.6s ease forwards;
+}
+
+@keyframes metricGlow {
+  0%   { filter: brightness(1); }
+  50%  { filter: brightness(1.4) drop-shadow(0 0 12px rgba(59,130,246,0.6)); }
+  100% { filter: brightness(1); }
+}
+
+/* ── Mobile nav overlay link animation ─────────────────────── */
+.nav-overlay.open a {
+  animation: navLinkIn 0.4s ease forwards;
+}
+
+.nav-overlay.open a:nth-child(1) { animation-delay: 0.05s; }
+.nav-overlay.open a:nth-child(2) { animation-delay: 0.10s; }
+.nav-overlay.open a:nth-child(3) { animation-delay: 0.15s; }
+.nav-overlay.open a:nth-child(4) { animation-delay: 0.20s; }
+.nav-overlay.open a:nth-child(5) { animation-delay: 0.25s; }
+.nav-overlay.open a:nth-child(6) { animation-delay: 0.30s; }
+
+@keyframes navLinkIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Orbit animation for agent visual ──────────────────────── */
+.agent-orb::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.agent-orb:nth-child(2)::after { background: var(--accent-purple); }
+.agent-orb:nth-child(3)::after { background: rgba(59,130,246,0.5); }
+
+/* ── Mallo bar widths ───────────────────────────────────────── */
+.vis-bar:nth-child(1) .vis-bar-fill { width: 85%; animation-delay: 0s; }
+.vis-bar:nth-child(2) .vis-bar-fill { width: 62%; animation-delay: 0.3s; }
+.vis-bar:nth-child(3) .vis-bar-fill { width: 74%; animation-delay: 0.6s; }
+.vis-bar:nth-child(4) .vis-bar-fill { width: 48%; animation-delay: 0.9s; }
+.vis-bar:nth-child(5) .vis-bar-fill { width: 91%; animation-delay: 1.2s; }
