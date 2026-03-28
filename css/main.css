@@ -693,6 +693,7 @@ section { padding: 7rem 0; }
   border-radius: 12px;
   padding: 0;
   overflow: hidden;
+  position: relative;
   transition: box-shadow 0.3s, border-left-color 0.3s;
 }
 
@@ -702,24 +703,28 @@ section { padding: 7rem 0; }
   box-shadow: 0 0 20px rgba(59,130,246,0.1);
 }
 
-.principle-img {
-  width: 100%;
-  height: 120px;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+/* Image as faded background via pseudo-element, text overlays on top */
+.principle-img--tl::before,
+.principle-img--tr::before,
+.principle-img--bl::before,
+.principle-img--br::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image: url('../assets/philosophy-grid.jpeg');
   background-size: 200% 200%;
   background-repeat: no-repeat;
-  overflow: hidden;
+  opacity: 0.18;
+  border-radius: inherit;
+  pointer-events: none;
 }
 
-/* Each quadrant of the 2×2 source image */
-.principle-img--tl { background-position: 0% 0%; }
-.principle-img--tr { background-position: 100% 0%; }
-.principle-img--bl { background-position: 0% 100%; }
-.principle-img--br { background-position: 100% 100%; }
+.principle-img--tl::before { background-position: 0% 0%; }
+.principle-img--tr::before { background-position: 100% 0%; }
+.principle-img--bl::before { background-position: 0% 100%; }
+.principle-img--br::before { background-position: 100% 100%; }
 
-.principle-text { padding: 1rem 1.25rem 1.25rem; }
+.principle-text { padding: 1.25rem; position: relative; z-index: 1; }
 .principle-card h4 { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.4rem; }
 .principle-card p  { font-size: 0.9rem; }
 
