@@ -1,0 +1,26 @@
+# Claude Code local settings
+.claude/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories
+.vscode/
+.idea/
+
+# Local environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Dependency directories (if ever added)
+node_modules/
+
+# Build output (if ever added)
+dist/
+build/
