@@ -68,6 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', updateActiveLink, { passive: true });
 
+  /* ── Hash scroll after GSAP init ───────────────────────── */
+  const hashTarget = window.location.hash && document.querySelector(window.location.hash);
+  if (hashTarget) {
+    window.history.replaceState(null, '', window.location.pathname);
+  }
+
   /* ── GSAP page load sequence ────────────────────────────── */
   if (typeof gsap === 'undefined') return;
 
@@ -84,7 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
       clearProps: 'transform',
     }, 0.4)
     .to('.hero-sub', { opacity: 1, duration: 0.6 }, 0.6)
-    .to('.hero-ctas', { opacity: 1, duration: 0.6, scale: 1 }, 0.8);
+    .to('.hero-ctas', { opacity: 1, duration: 0.6, scale: 1 }, 0.8)
+    .call(() => {
+      if (hashTarget) {
+        ScrollTrigger.refresh();
+        hashTarget.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
 
   // Canvas reveals via class — store base opacity for scroll fade
   setTimeout(() => {

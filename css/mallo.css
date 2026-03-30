@@ -23,11 +23,18 @@
 }
 
 .mallo-app-icon {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.5rem;
   display: block;
   filter: drop-shadow(0 0 24px rgba(59,130,246,0.4));
   animation: iconFloat 4s ease-in-out infinite;
+}
+.mallo-app-icon img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
 }
 
 @keyframes iconFloat {
@@ -36,11 +43,12 @@
 }
 
 .mallo-headline {
+  font-size: clamp(2rem, 5vw, 4.5rem);
   margin-bottom: 1.25rem;
 }
 
 .mallo-sub {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--text-muted);
   max-width: 560px;
   margin: 0 auto 2.5rem;
@@ -56,6 +64,12 @@
 
 .mallo-store-btn {
   gap: 0.6rem;
+}
+
+.btn-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .mallo-availability {
@@ -96,7 +110,7 @@
 
 .mallo-feature-icon svg { width: 100%; height: 100%; }
 
-.mallo-feature-card h3 { margin-bottom: 0.75rem; color: var(--text-primary); font-size: 1.15rem; }
+.mallo-feature-card h3 { margin-bottom: 0.75rem; color: var(--text-primary); }
 .mallo-feature-card p  { font-size: 0.95rem; }
 
 /* ── How It Works ───────────────────────────────────────────── */
@@ -123,7 +137,7 @@
   display: block;
 }
 
-.mallo-step h3 { margin-bottom: 0.75rem; font-size: 1.15rem; }
+.mallo-step h3 { margin-bottom: 0.75rem; }
 .mallo-step p  { font-size: 0.95rem; }
 
 .mallo-step-divider {
@@ -184,6 +198,6 @@
 }
 
 @media (max-width: 600px) {
-  .mallo-app-icon { font-size: 3rem; }
+  .mallo-app-icon { width: 48px; height: 48px; }
   .mallo-ctas { flex-direction: column; align-items: center; }
 }
